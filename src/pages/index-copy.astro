@@ -7,15 +7,23 @@ import Testimonial from '../components/Testimonial.astro';
 import Pricing from '../components/Pricing.astro';
 import FAQ from '../components/Faq.astro';
 import CTA from '../components/CTA.astro';
-import Playlist from '../components/Playlist.astro';
-
-const response = await fetch('https://museobioacustico.cl/wp-json/wp/v2/media?per_page=100&page=2&media_type=audio');
-const data = await response.json();
-
 ---
 
-<Layout title="Museo Bioacustico - Alternative frontend - Bioodev">
+<Layout title="Welcome to Astro - Planetario template.">
 
-    <Playlist data={data}/>
+    <!-- Hero section -->
+    <Hero/>
+    <!-- Logo cloud -->
+    <Logos/>
+    <!-- Feature section -->
+    <Features/>
+    <!-- Testimonial section -->
+    <Testimonial/>
+    <!-- Pricing section -->
+    <Pricing/>
+    <!-- FAQs -->
+    <FAQ/>
+    <!-- CTA section -->
+    <CTA/>
 
 </Layout>

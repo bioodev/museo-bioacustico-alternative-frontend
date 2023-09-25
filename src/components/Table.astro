@@ -1,0 +1,24 @@
+---
+interface Props {
+    data: any;
+}
+
+const { data } = Astro.props;
+
+// console.log(data)
+---
+
+<div>
+    <ul>
+        {
+            data.map(({ title, url }) => {
+                return (
+                    <li>
+                        <a href={url}>{title}</a>
+                    </li>
+                );
+            })
+        }
+        <!-- {audioItems} -->
+    </ul>
+</div>

@@ -1,0 +1,17 @@
+---
+interface Props {
+    data: any;
+}
+
+const { data } = Astro.props;
+
+// console.log(data);
+---
+
+<div class="p-8 gap-2 border rounded-lg mb-4 shadow ease-in-out m-4 overflow-hidden">
+    <div class="text-base font-semibold leading-7 text-gray-900">{data.title}</div>
+    <audio autoplay="false" preload="none" controls class="w-full">
+        <source src={data.url} type="audio/wav" />
+         No audio support.
+    </audio>
+</div>
